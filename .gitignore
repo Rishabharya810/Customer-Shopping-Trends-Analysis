@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets / environment
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# local editor / derived
+.vscode/
+output/
+
+# root-level duplicate of powerbi/ file (delete after closing Power BI Desktop)
+/customer_behavior_dashboard.pbix
