@@ -107,7 +107,7 @@ Sanity checks: total revenue **$233,081**, **3,900** customers, average order **
 
 ## Credits & Acknowledgements
 
-- **Dataset:** [Customer Shopping Trends Dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset) by Sourav Banerjee (Kaggle) — synthetic retail data, 3,900 records.
+- **Dataset:** [Customer Shopping Trends Dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset) by Sourav Banerjee (Kaggle) — synthetic retail data, 3,900 records. Kaggle's data card says the synthetic records were generated using ChatGPT; this repository does not call an AI service.
 - **Tutorial:** The base project structure, cleaning workflow, SQL questions, and dashboard layout follow [Amlan Mohanty's end-to-end tutorial](https://youtu.be/5PrZvPeUw60) ([repo](https://github.com/amlanmohanty1/customer-trends-data-analysis-SQL-Python-PowerBI), MIT License, © Amlan Mohanty).
   Extensions and deviations are my own — notably: explicit DAX measures replacing implicit `Sum(customer_id)` aggregation in charts, the corrected `age_group` label propagated through the full notebook → database → dashboard lineage, and the independently verified report & presentation deliverables.
 
