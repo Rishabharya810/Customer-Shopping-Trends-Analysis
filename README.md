@@ -12,6 +12,8 @@ What 3,900 purchases reveal about revenue, discounts, subscriptions, and loyalty
 
 **Interactive dashboard:** [Open the Power BI report in your browser](https://app.powerbi.com/reportEmbed?reportId=00bb9618-099d-48df-b498-47d2babc82b1&autoAuth=true&embeddedDemo=true)
 
+> **Access note:** The embedded report requires a Microsoft work or school account. Personal Microsoft accounts are not supported by this Power BI embed. If you cannot sign in, use the static preview above or open the included `.pbix` file in Power BI Desktop.
+
 ## Business Problem
 
 A retail company wants to understand its customers' shopping behavior to improve sales, satisfaction, and loyalty. The overarching question:
