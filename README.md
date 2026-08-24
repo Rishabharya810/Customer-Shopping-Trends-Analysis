@@ -10,6 +10,8 @@ What 3,900 purchases reveal about revenue, discounts, subscriptions, and loyalty
 ![Dashboard preview](assets/dashboard_screenshot.jpg)
 *Static preview of the Power BI dashboard. Open `powerbi/customer_behavior_dashboard.pbix` for the interactive version, with KPI cards, subscription share, revenue and sales by category and age group, and slicers for gender, category, subscription status, and shipping type.*
 
+**Interactive dashboard:** [Open the Power BI report in your browser](https://app.powerbi.com/reportEmbed?reportId=00bb9618-099d-48df-b498-47d2babc82b1&autoAuth=true&embeddedDemo=true)
+
 ## Business Problem
 
 A retail company wants to understand its customers' shopping behavior to improve sales, satisfaction, and loyalty. The overarching question:
