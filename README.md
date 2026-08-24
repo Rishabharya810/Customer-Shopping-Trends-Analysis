@@ -5,12 +5,10 @@ What 3,900 purchases reveal about revenue, discounts, subscriptions, and loyalty
 
 ---
 
-## Live Dashboard
+## Dashboard Preview
 
-<!-- After publishing to Power BI Service: replace the placeholder below with a screenshot in assets/ and add your Publish-to-web link -->
-![Dashboard preview](assets/dashboard_screenshot.png)
-*Interactive dashboard: KPI cards, subscription share, revenue & sales by category and age group, with slicers for gender, category, subscription status, and shipping type.*
-<!-- Link: [View the interactive dashboard](https://app.powerbi.com/...) -->
+![Dashboard preview](assets/dashboard_screenshot.jpg)
+*Static preview of the Power BI dashboard. Open `powerbi/customer_behavior_dashboard.pbix` for the interactive version, with KPI cards, subscription share, revenue and sales by category and age group, and slicers for gender, category, subscription status, and shipping type.*
 
 ## Business Problem
 
@@ -73,6 +71,8 @@ customer_shopping_behavior.csv (3,900 rows × 18 columns)
 ├── LICENSE                          # MIT (this repo)
 ├── requirements.txt
 ├── .gitignore
+├── assets/
+│   └── dashboard_screenshot.jpg
 ├── data/
 │   └── customer_shopping_behavior.csv
 ├── notebooks/
