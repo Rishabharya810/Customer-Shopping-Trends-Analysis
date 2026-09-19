@@ -108,7 +108,7 @@ customer_shopping_behavior.csv (3,900 rows × 18 columns)
 
 1. **Clone the repo** and install dependencies: `pip install -r requirements.txt`
 2. **Create the database:** in pgAdmin, create an empty database named `customer_behavior`
-3. **Run the notebook** top to bottom — it cleans the CSV and loads the `customer` table into PostgreSQL (set your Postgres password in the connection cell; don't commit it)
+3. **Run the notebook** top to bottom — it cleans the CSV and loads the `customer` table into PostgreSQL. The notebook reads your Postgres password from the `PG_PASSWORD` environment variable (never hardcoded): set it first — on Windows run `setx PG_PASSWORD "your-password"` then restart Jupyter, or on macOS/Linux run `export PG_PASSWORD="your-password"`.
 4. **Open the .pbix** in Power BI Desktop → Transform data → Data source settings → edit credentials to point at your local PostgreSQL → Refresh
 5. **SQL results:** run `sql/customer_behavior_sql_queries.sql` in the pgAdmin Query Tool and compare against the report's Appendix A
 
