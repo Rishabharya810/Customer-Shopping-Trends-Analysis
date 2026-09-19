@@ -8,11 +8,16 @@ What 3,900 purchases reveal about revenue, discounts, subscriptions, and loyalty
 ## Dashboard Preview
 
 ![Dashboard preview](assets/dashboard_screenshot.jpg)
-*Static preview of the Power BI dashboard. Open `powerbi/customer_behavior_dashboard.pbix` for the interactive version, with KPI cards, subscription share, revenue and sales by category and age group, and slicers for gender, category, subscription status, and shipping type.*
 
-**Interactive dashboard:** [Open the Power BI report in your browser](https://app.powerbi.com/reportEmbed?reportId=00bb9618-099d-48df-b498-47d2babc82b1&autoAuth=true&embeddedDemo=true)
+*Static preview of the Power BI dashboard — KPI cards, subscription share, revenue and sales by category and age group, with slicers for gender, category, subscription status, and shipping type.*
 
-> **Access note:** The embedded report requires a Microsoft work or school account. Personal Microsoft accounts are not supported by this Power BI embed. If you cannot sign in, use the static preview above or open the included `.pbix` file in Power BI Desktop.
+### Interactive version
+
+The full report — with working slicers, cross-filtering, tooltips, and the explicit DAX measures — is delivered as a Power BI Desktop file so anyone can explore it without a login or license:
+
+➡️ Open **`powerbi/customer_behavior_dashboard.pbix`** in [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop) (free download). In **Transform data → Data source settings**, repoint the PostgreSQL connection to your local instance, then **Refresh**.
+
+> **Note on public sharing:** This report was authored on an education-tenant Power BI account whose administrator has disabled "Publish to web (public)" embedding, so a no-login public web link is not available from that tenant. The `.pbix` file and the static preview above provide a durable, no-login showcase that does not depend on an organization sign-in or a trial license.
 
 ## Business Problem
 
