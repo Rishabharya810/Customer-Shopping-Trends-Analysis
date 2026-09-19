@@ -1,4 +1,4 @@
-# Customer Shopping Behavior Analysis
+# Customer Shopping Trends Analysis
 
 **End-to-end retail analytics: Python → PostgreSQL → Power BI → report & presentation.**
 What 3,900 purchases reveal about revenue, discounts, subscriptions, and loyalty — with verified numbers and prioritized recommendations.
