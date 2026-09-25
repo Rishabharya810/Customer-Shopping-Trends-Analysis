@@ -1,16 +1,23 @@
-# Customer Shopping Behavior Analysis
+# Customer Shopping Trends Analysis
 
 **End-to-end retail analytics: Python → PostgreSQL → Power BI → report & presentation.**
 What 3,900 purchases reveal about revenue, discounts, subscriptions, and loyalty — with verified numbers and prioritized recommendations.
 
 ---
 
-## Live Dashboard
+## Dashboard Preview
 
-<!-- After publishing to Power BI Service: replace the placeholder below with a screenshot in assets/ and add your Publish-to-web link -->
-![Dashboard preview](assets/dashboard_screenshot.png)
-*Interactive dashboard: KPI cards, subscription share, revenue & sales by category and age group, with slicers for gender, category, subscription status, and shipping type.*
-<!-- Link: [View the interactive dashboard](https://app.powerbi.com/...) -->
+![Dashboard preview](assets/dashboard_screenshot.jpg)
+
+*Static preview of the Power BI dashboard — KPI cards, subscription share, revenue and sales by category and age group, with slicers for gender, category, subscription status, and shipping type.*
+
+### Interactive version
+
+The full report — with working slicers, cross-filtering, tooltips, and the explicit DAX measures — is delivered as a Power BI Desktop file so anyone can explore it without a login or license:
+
+➡️ Open **`powerbi/customer_behavior_dashboard.pbix`** in [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop) (free download). In **Transform data → Data source settings**, repoint the PostgreSQL connection to your local instance, then **Refresh**.
+
+> **Note on public sharing:** This report was authored on an education-tenant Power BI account whose administrator has disabled "Publish to web (public)" embedding, so a no-login public web link is not available from that tenant. The `.pbix` file and the static preview above provide a durable, no-login showcase that does not depend on an organization sign-in or a trial license.
 
 ## Business Problem
 
@@ -73,6 +80,8 @@ customer_shopping_behavior.csv (3,900 rows × 18 columns)
 ├── LICENSE                          # MIT (this repo)
 ├── requirements.txt
 ├── .gitignore
+├── assets/
+│   └── dashboard_screenshot.jpg
 ├── data/
 │   └── customer_shopping_behavior.csv
 ├── notebooks/
@@ -99,7 +108,7 @@ customer_shopping_behavior.csv (3,900 rows × 18 columns)
 
 1. **Clone the repo** and install dependencies: `pip install -r requirements.txt`
 2. **Create the database:** in pgAdmin, create an empty database named `customer_behavior`
-3. **Run the notebook** top to bottom — it cleans the CSV and loads the `customer` table into PostgreSQL (set your Postgres password in the connection cell; don't commit it)
+3. **Run the notebook** top to bottom — it cleans the CSV and loads the `customer` table into PostgreSQL. The notebook reads your Postgres password from the `PG_PASSWORD` environment variable (never hardcoded): set it first — on Windows run `setx PG_PASSWORD "your-password"` then restart Jupyter, or on macOS/Linux run `export PG_PASSWORD="your-password"`.
 4. **Open the .pbix** in Power BI Desktop → Transform data → Data source settings → edit credentials to point at your local PostgreSQL → Refresh
 5. **SQL results:** run `sql/customer_behavior_sql_queries.sql` in the pgAdmin Query Tool and compare against the report's Appendix A
 
@@ -107,7 +116,7 @@ Sanity checks: total revenue **$233,081**, **3,900** customers, average order **
 
 ## Credits & Acknowledgements
 
-- **Dataset:** [Customer Shopping Trends Dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset) by Sourav Banerjee (Kaggle) — synthetic retail data, 3,900 records.
+- **Dataset:** [Customer Shopping Trends Dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset) by Sourav Banerjee (Kaggle) — synthetic retail data, 3,900 records. Kaggle's data card says the synthetic records were generated using ChatGPT; this repository does not call an AI service.
 - **Tutorial:** The base project structure, cleaning workflow, SQL questions, and dashboard layout follow [Amlan Mohanty's end-to-end tutorial](https://youtu.be/5PrZvPeUw60) ([repo](https://github.com/amlanmohanty1/customer-trends-data-analysis-SQL-Python-PowerBI), MIT License, © Amlan Mohanty).
   Extensions and deviations are my own — notably: explicit DAX measures replacing implicit `Sum(customer_id)` aggregation in charts, the corrected `age_group` label propagated through the full notebook → database → dashboard lineage, and the independently verified report & presentation deliverables.
 
